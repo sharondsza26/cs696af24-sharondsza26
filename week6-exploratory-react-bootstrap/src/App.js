@@ -9,6 +9,8 @@ import { RiSettings5Fill } from "react-icons/ri"; // Settings icon
 import { FaBell } from 'react-icons/fa';  // Notification icon
 import { AiOutlineSearch } from 'react-icons/ai';  // Search icon
 import { NavDropdown } from 'react-bootstrap';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -70,9 +72,8 @@ function App() {
 
       </div>
 
-      <div className='Footer'>
-          <p> Footer </p>
-      </div>
+      {/* Footer Section */}
+      <Footer />
 
     
     
