@@ -1,57 +1,82 @@
 import './App.css';
 import { Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BiSolidDashboard } from "react-icons/bi";
-import { FaUsers } from "react-icons/fa";
-import { SiSimpleanalytics } from "react-icons/si";
-import { PiPackageFill } from "react-icons/pi";
-import { RiSettings5Fill } from "react-icons/ri";
-
+import { BiSolidDashboard } from "react-icons/bi"; // Dashboard icon
+import { FaUsers } from "react-icons/fa"; // Users icon
+import { SiSimpleanalytics } from "react-icons/si"; // Analytics icon
+import { PiPackageFill } from "react-icons/pi"; // Orders icon
+import { RiSettings5Fill } from "react-icons/ri"; // Settings icon
 import { FaBell } from 'react-icons/fa';  // Notification icon
 import { AiOutlineSearch } from 'react-icons/ai';  // Search icon
-import { Dropdown } from 'react-bootstrap'; // Dropdown for user profile
+import { NavDropdown } from 'react-bootstrap';
 
 function App() {
   return (
     // Outer App
-    <div className="App" > 
+    <div className="App" >
 
+      {/* Nav and Header Section */}
+      <div className='nav-and-header'> 
       <Navbar expand="lg" >
-       <div className='NavigationSidebar'>
-         <Navbar.Brand href="#home">Navigation Sidebar</Navbar.Brand>
-         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-         <div className='navigation-content'>
 
+        {/* Navigation Section */}
+        <div className='NavigationSidebar'>
+            <Navbar.Brand href="#home">Navigation Sidebar</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        {/* Nav Content */}
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="flex-column">
-          <Nav.Link href="#home">
-          <BiSolidDashboard /> Dashboard</Nav.Link>
-          <Nav.Link href="#link">
-          <FaUsers /> Users</Nav.Link>
-          <Nav.Link href="#link">
-          <SiSimpleanalytics /> Analytics</Nav.Link>
-          <Nav.Link href="#link">
-          <PiPackageFill/> Orders</Nav.Link>
-          <Nav.Link href="#link">
-          <RiSettings5Fill /> Settings</Nav.Link>
-            </Nav>
+          {/* Navigation Content */}
+          <div className='navigation-content'>
+
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="flex-column">
+                <Nav.Link href="#home"> <BiSolidDashboard /> Dashboard</Nav.Link>
+                <Nav.Link href="#users"> <FaUsers /> Users</Nav.Link>
+                <Nav.Link href="#analytics"> <SiSimpleanalytics /> Analytics</Nav.Link>
+                <Nav.Link href="#orders"> <PiPackageFill/> Orders</Nav.Link>
+                <Nav.Link href="#settings"> <RiSettings5Fill /> Settings</Nav.Link>
+              </Nav>
             </Navbar.Collapse>
-            </div>
-         </div>
-           
-      
-            </Navbar>
+          </div>
+            
+        </div>
+      </Navbar>
 
-        <div className='Footer'>
-          <p> Footer </p>
+        {/* Header Section */}
+        <div className='header'><p>Header</p>
+        
+          {/* Header Content */}
+          <div className='header-content'>
+
+            {/* Search Bar */}
+            <div className="search-bar">
+            <AiOutlineSearch className="search-icon" />
+            <input type="text" placeholder="Search..." />
+            </div>
+
+            {/* Notification */}
+            <div className="notification">
+            <FaBell className="notification-icon" />
+            </div>
+
+            {/* User Drop Down */}
+            <NavDropdown title="User" id="basic-nav-dropdown" className='user-dropdown'>
+              <NavDropdown.Item href="#action/profile">Profile</NavDropdown.Item>
+              <NavDropdown.Item href="#action/settings">Settings</NavDropdown.Item>
+              <NavDropdown.Item href="#action/logout">Logout</NavDropdown.Item>
+            </NavDropdown>
+              
+          </div>
         </div>
 
-            </div> //  Outer app
+      </div>
 
+      <div className='Footer'>
+          <p> Footer </p>
+      </div>
 
-
+    
+    
+    </div> //  Outer app
         
   );
 }
