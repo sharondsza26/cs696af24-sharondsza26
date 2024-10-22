@@ -9,6 +9,8 @@ import { RiSettings5Fill } from "react-icons/ri"; // Settings icon
 import { FaBell } from 'react-icons/fa';  // Notification icon
 import { AiOutlineSearch } from 'react-icons/ai';  // Search icon
 import { NavDropdown } from 'react-bootstrap';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
 import Footer from './components/Footer';
 
 
@@ -19,6 +21,16 @@ function App() {
     { date: '2024-10-19', description: 'Purchase', amount: '$25.00' },
     { date: '2024-10-18', description: 'Refund Processed', amount: '$15.00' },
   ];
+
+  const data = [
+    { name: 'Jan', uv: 400, pv: 2400 },
+    { name: 'Feb', uv: 300, pv: 1398 },
+    { name: 'Mar', uv: 200, pv: 9800 },
+    { name: 'Apr', uv: 278, pv: 3908 },
+    { name: 'May', uv: 189, pv: 4800 },
+    { name: 'Jun', uv: 239, pv: 3800 },
+  ];
+
   return (
 
     <Container className='main' fluid>
@@ -52,7 +64,7 @@ function App() {
 
         <Container className='header-title' fluid>
         {/* Header Section */}
-        <div className='header'><p>Header</p>
+        <div className='header'>
         
           {/* Header Content */}
           <div className='header-content'>
@@ -79,11 +91,10 @@ function App() {
         </div>
         
         {/* Main Content */}
-        <div className='main-content'> Main Content
+        <div className='main-content'>
           <div className='grid-layout'> 
             <Row>
             <Col> 
-            Column 1 
             <Stack>
             <Card>
               <Card.Body> Total Users
@@ -91,7 +102,7 @@ function App() {
               </Card.Body>
             </Card>
 
-            <Card>
+            <Card className='Card'>
               <Card.Body>Revenue
                 <Card.Title>$45,678</Card.Title>
               </Card.Body>
@@ -122,7 +133,6 @@ function App() {
             </Col>
 
             <Col>
-            Column 2
             <Row>
               <Col>
               <Card>
@@ -141,7 +151,20 @@ function App() {
                </Col>
             </Row>
             <Stack>
-              <p>chart </p>
+            <h6>Sales Overview </h6>
+              
+              <ResponsiveContainer width="100%" height={250}>
+                <LineChart data={data}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Line type="monotone" dataKey="uv" stroke="#8884d8" activeDot={{ r: 8 }} />
+                  <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
+                </LineChart>
+              </ResponsiveContainer>
+              
 
               <div className='performance-metric'>
               <h6>Performance Metrics</h6>
