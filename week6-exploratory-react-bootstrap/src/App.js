@@ -1,5 +1,5 @@
 import './App.css';
-import { Container, Nav, Navbar, Col, Stack, Row, Card } from 'react-bootstrap';
+import { Container, Nav, Navbar, Col, Stack, Row, Card, ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BiSolidDashboard } from "react-icons/bi"; // Dashboard icon
 import { FaUsers } from "react-icons/fa"; // Users icon
@@ -116,7 +116,17 @@ function App() {
             </Row>
             <Stack>
               <p>chart </p>
-              <p>performance metric</p>
+
+              <div className='performance-metric'>
+              <h6>Performance Metrics</h6>
+              <p>CPU Usage</p>
+              <ProgressBar variant='secondary' now={70} />
+              <p>Memory Usage</p>
+              <ProgressBar variant='secondary' now={35} />
+              <p>Disk Usage</p>
+              <ProgressBar variant='secondary' now={85} />
+              </div>
+
             </Stack>
             </Col>
 

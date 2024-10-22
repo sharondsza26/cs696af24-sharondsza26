@@ -87,3 +87,11 @@
 .dropdown-menu {
   padding: 5px;
 }
+
+.performance-metric {
+  text-align: left;
+}
+
+.performance-metric h6{
+  text-align: center;
+}
