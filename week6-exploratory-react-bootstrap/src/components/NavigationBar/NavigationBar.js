@@ -10,6 +10,8 @@ import { RiSettings5Fill } from "react-icons/ri"; // Settings icon
 
 function NavigationBar() {
     return(
+
+      <Navbar expand="lg">
         <Container className='nav-sidebar' fluid>
         <div className='NavigationSidebar'>
             <Navbar.Brand href="#home">Navigation Sidebar</Navbar.Brand>
@@ -31,6 +33,7 @@ function NavigationBar() {
             
         </div>
         </Container>
+        </Navbar>
     )
 }
 
