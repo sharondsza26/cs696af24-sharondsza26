@@ -1,5 +1,5 @@
 import './App.css';
-import { Container, Nav, Navbar, Col, Stack, Row, Card, ProgressBar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Col, Stack, Row, Card, ProgressBar, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BiSolidDashboard } from "react-icons/bi"; // Dashboard icon
 import { FaUsers } from "react-icons/fa"; // Users icon
@@ -13,6 +13,12 @@ import Footer from './components/Footer';
 
 
 function App() {
+  const activities = [
+    { date: '2024-10-21', description: 'Payment Received', amount: '$150.00' },
+    { date: '2024-10-20', description: 'Subscription Renewal', amount: '$9.99' },
+    { date: '2024-10-19', description: 'Purchase', amount: '$25.00' },
+    { date: '2024-10-18', description: 'Refund Processed', amount: '$15.00' },
+  ];
   return (
 
     <Container className='main' fluid>
@@ -91,7 +97,27 @@ function App() {
               </Card.Body>
             </Card>
 
-              <p>Recent Activity</p>
+           <Container className='recent-activity'>
+            <h6>Recent User Activity</h6>
+            <Table >
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {activities.map((activity, index) => (
+                  <tr key={index}>
+                    <td>{activity.date}</td>
+                    <td>{activity.description}</td>
+                    <td>{activity.amount}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+            </Container>
             </Stack>
             </Col>
 
