@@ -30,6 +30,7 @@
 
 .nav-and-header{
   display: flex;
+  align-items: start;
 }
 
 .NavigationSidebar{
@@ -39,6 +40,7 @@
 .navigation-content{
   display: flex;
   text-align: left;
+  align-items: start;
 }
 
 .header {
@@ -102,6 +104,18 @@
   text-align: left;
 }
 
-.Card {
+.revenue-Card {
+  margin-top: 10px;
+}
+
+.recent-activity {
+  margin-top: 15px;
+}
+
+.transaction-table {
+  margin-top: 10px;
+}
+
+.sales-overview{
   margin-top: 10px;
 }

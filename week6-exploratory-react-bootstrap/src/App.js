@@ -102,7 +102,7 @@ function App() {
               </Card.Body>
             </Card>
 
-            <Card className='Card'>
+            <Card className='revenue-Card'>
               <Card.Body>Revenue
                 <Card.Title>$45,678</Card.Title>
               </Card.Body>
@@ -110,7 +110,7 @@ function App() {
 
            <Container className='recent-activity'>
             <h6>Recent User Activity</h6>
-            <Table >
+            <Table className='transaction-table'>
               <thead>
                 <tr>
                   <th>Date</th>
@@ -151,6 +151,7 @@ function App() {
                </Col>
             </Row>
             <Stack>
+              <div className='sales-overview'>
             <h6>Sales Overview </h6>
               
               <ResponsiveContainer width="100%" height={250}>
@@ -164,7 +165,7 @@ function App() {
                   <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
                 </LineChart>
               </ResponsiveContainer>
-              
+              </div>
 
               <div className='performance-metric'>
               <h6>Performance Metrics</h6>

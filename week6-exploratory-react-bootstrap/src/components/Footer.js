@@ -7,23 +7,22 @@ function Footer() {
         <footer>
         <Container className='footer' fluid>
             <Row>
-            <div className="footer-content bg-secondary text-white p-4">
+            <div className="footer-content bg-secondary text-white">
                 <div className='mx-5'>
                 <div className='react-icon'>< FaReact /></div>
                 <h6>&copy; 2024 Sharon Dsouza. </h6>
                 <p>All rights reserved.</p>
                 </div>
 
-            <div className='links'>
+            <div className='links footer-content'>
                 <Nav className="flex-column fs-9 footer-links">
-                <Nav.Link href="#home" className='text-white'>Dashboard </Nav.Link>
                 <Nav.Link href="#settings" className='text-white'>Settings </Nav.Link>
                 <Nav.Link href="#" className='text-white'>Terms of Service </Nav.Link>
                 <Nav.Link href="#" className='text-white'>Privacy Policy</Nav.Link>
                 </Nav>
             </div>
 
-            <div className='contact-us'>
+            <div className='contact-us flex-column footer-content'>
                 <h6> Contact Us! </h6>
                 <p>mailus@gmail.com</p>
                 <p>Phone: +1 (888)888 8888</p>
