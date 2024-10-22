@@ -1,5 +1,5 @@
 import './App.css';
-import { Container, Nav, Navbar, Col, Stack, Row } from 'react-bootstrap';
+import { Container, Nav, Navbar, Col, Stack, Row, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BiSolidDashboard } from "react-icons/bi"; // Dashboard icon
 import { FaUsers } from "react-icons/fa"; // Users icon
@@ -79,8 +79,18 @@ function App() {
             <Col> 
             Column 1 
             <Stack>
-              <p>Stat Card 1</p>
-              <p>Stat Card 2</p>
+            <Card>
+              <Card.Body> Total Users
+                <Card.Title>10,245</Card.Title>
+              </Card.Body>
+            </Card>
+
+            <Card>
+              <Card.Body>Revenue
+                <Card.Title>$45,678</Card.Title>
+              </Card.Body>
+            </Card>
+
               <p>Recent Activity</p>
             </Stack>
             </Col>
@@ -88,8 +98,21 @@ function App() {
             <Col>
             Column 2
             <Row>
-              <Col> <p>stat card 3</p> </Col>
-              <Col> <p> stat card 4 </p> </Col>
+              <Col>
+              <Card>
+              <Card.Body> Orders
+                <Card.Title>1,234</Card.Title>
+              </Card.Body>
+            </Card>
+              </Col>
+
+              <Col> 
+              <Card>
+              <Card.Body> Conversion Rate
+                <Card.Title>2.3%</Card.Title>
+              </Card.Body>
+            </Card>
+               </Col>
             </Row>
             <Stack>
               <p>chart </p>
