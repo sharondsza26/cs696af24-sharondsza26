@@ -1,18 +1,16 @@
 import './App.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BiSolidDashboard } from "react-icons/bi"; // Dashboard icon
-import { FaUsers } from "react-icons/fa"; // Users icon
-import { SiSimpleanalytics } from "react-icons/si"; // Analytics icon
-import { PiPackageFill } from "react-icons/pi"; // Orders icon
-import { RiSettings5Fill } from "react-icons/ri"; // Settings icon
 import { FaBell } from 'react-icons/fa';  // Notification icon
 import { AiOutlineSearch } from 'react-icons/ai';  // Search icon
 import { FaUser } from "react-icons/fa";
 import { NavDropdown } from 'react-bootstrap';
 
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import MainContent from './components/MainContent/MainContent'
+
 
 
 function App() {
@@ -28,27 +26,8 @@ function App() {
 
         {/* Navigation Section */}
 
-        <Container className='nav-sidebar' fluid>
-        <div className='NavigationSidebar'>
-            <Navbar.Brand href="#home">Navigation Sidebar</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-          {/* Navigation Content */}
-          <div className='navigation-content'>
-
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="flex-column">
-                <Nav.Link href="#home"> <BiSolidDashboard /> Dashboard</Nav.Link>
-                <Nav.Link href="#users"> <FaUsers /> Users</Nav.Link>
-                <Nav.Link href="#analytics"> <SiSimpleanalytics /> Analytics</Nav.Link>
-                <Nav.Link href="#orders"> <PiPackageFill/> Orders</Nav.Link>
-                <Nav.Link href="#settings"> <RiSettings5Fill /> Settings</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </div>
-            
-        </div>
-        </Container>
+        <NavigationBar />
+        
       </Navbar>
       
 

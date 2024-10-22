@@ -34,16 +34,7 @@
   
 }
 
-.NavigationSidebar{
-  text-align: center;
-  background-color: white;
-}
 
-.navigation-content{
-  display: flex;
-  text-align: left;
-  align-items: start;
-}
 
 .header {
   text-align: center;
