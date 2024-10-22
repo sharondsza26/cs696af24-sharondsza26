@@ -1,10 +1,11 @@
-import { Col, Row, Stack, Nav, NavLink } from 'react-bootstrap'
+import { Container, Col, Row, Stack, Nav, NavLink } from 'react-bootstrap'
 import { FaReact } from "react-icons/fa";
 import './Footer.css'
 
 function Footer() {
     return(
-        <footer className='footer'>
+        <footer>
+        <Container className='footer' fluid>
             <Row>
             <div className="footer-content bg-secondary text-white p-4">
                 <div className='mx-5'>
@@ -30,6 +31,7 @@ function Footer() {
       </div> 
 
       </Row>
+        </Container>
         </footer>
     )
 }

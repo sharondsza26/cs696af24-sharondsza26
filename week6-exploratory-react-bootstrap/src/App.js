@@ -1,5 +1,5 @@
 import './App.css';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Col, Stack, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BiSolidDashboard } from "react-icons/bi"; // Dashboard icon
 import { FaUsers } from "react-icons/fa"; // Users icon
@@ -14,7 +14,8 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    // Outer App
+
+    <Container className='main' fluid>
     <div className="App" >
 
       {/* Nav and Header Section */}
@@ -43,6 +44,7 @@ function App() {
         </div>
       </Navbar>
 
+        <Container className='header-title' fluid>
         {/* Header Section */}
         <div className='header'><p>Header</p>
         
@@ -69,15 +71,47 @@ function App() {
               
           </div>
         </div>
+        
+        {/* Main Content */}
+        <div className='main-content'> Main Content
+          <div className='grid-layout'> 
+            <Row>
+            <Col> 
+            Column 1 
+            <Stack>
+              <p>Stat Card 1</p>
+              <p>Stat Card 2</p>
+              <p>Recent Activity</p>
+            </Stack>
+            </Col>
 
+            <Col>
+            Column 2
+            <Row>
+              <Col> <p>stat card 3</p> </Col>
+              <Col> <p> stat card 4 </p> </Col>
+            </Row>
+            <Stack>
+              <p>chart </p>
+              <p>performance metric</p>
+            </Stack>
+            </Col>
+
+            </Row>
+          </div>
+        </div>
+
+       </Container>
       </div>
+      
 
       {/* Footer Section */}
       <Footer />
 
     
     
-    </div> //  Outer app
+    </div>
+    </Container>
         
   );
 }
