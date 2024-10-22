@@ -31,10 +31,12 @@
 .nav-and-header{
   display: flex;
   align-items: start;
+  
 }
 
 .NavigationSidebar{
   text-align: center;
+  background-color: white;
 }
 
 .navigation-content{
@@ -46,7 +48,7 @@
 .header {
   text-align: center;
   width: 100%;
-  margin-top: 10px;
+  background-color: white;
 }
 
 .header-content {
@@ -54,7 +56,7 @@
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .search-bar {
@@ -71,7 +73,7 @@
   outline: none;
   padding: 5px;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
 .search-icon {
@@ -82,7 +84,7 @@
 
 .notification-icon {
   color: grey;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -90,32 +92,6 @@
   padding: 5px;
 }
 
-.performance-metric {
-  text-align: left;
-}
-
-.performance-metric h6{
-  text-align: center;
-}
-
-.recent-activity {
-  padding: 10px;
-  margin-top: 5px;
-  text-align: left;
-}
-
-.revenue-Card {
-  margin-top: 10px;
-}
-
-.recent-activity {
-  margin-top: 15px;
-}
-
-.transaction-table {
-  margin-top: 10px;
-}
-
-.sales-overview{
-  margin-top: 10px;
+.main {
+  background-color: rgb(243, 242, 242);
 }
