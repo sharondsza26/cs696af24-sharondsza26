@@ -1,10 +1,35 @@
-.NavigationSidebar{
-    text-align: center;
-    background-color: white;
-  }
-  
-  .navigation-content{
-    display: flex;
-    text-align: left;
-    align-items: start;
-  }
+.nav-sidebar {
+  background-color: white; 
+  padding: 10px; 
+}
+
+.navbar {
+  display: flex; 
+  align-items: start;
+  height: 78vh; 
+}
+
+.navbar-brand {
+  margin-bottom: 20px; 
+  font-size: 1.5rem;
+}
+
+.navigation-content {
+  display: flex; 
+  text-align: left;
+}
+
+.navigation-content .nav-link {
+  padding: 10px 15px; 
+  font-weight: 500; 
+  display: flex;
+  align-items: center;
+}
+
+.navigation-content .nav-link svg {
+  margin-right: 10px; 
+}
+
+.navigation-content .nav-link:hover {
+  background-color: #e9ecef; 
+}

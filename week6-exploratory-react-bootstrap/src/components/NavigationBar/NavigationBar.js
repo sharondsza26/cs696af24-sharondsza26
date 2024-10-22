@@ -11,17 +11,15 @@ import { RiSettings5Fill } from "react-icons/ri"; // Settings icon
 function NavigationBar() {
     return(
 
-      <Navbar expand="lg">
-        <Container className='nav-sidebar' fluid>
-        <div className='NavigationSidebar'>
-            <Navbar.Brand href="#home">Navigation Sidebar</Navbar.Brand>
+      <Navbar className='nav-sidebar' expand="lg">
+        <Container className='flex-column' fluid>
+            <Navbar.Brand href="#home">Dashboard</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           {/* Navigation Content */}
-          <div className='navigation-content'>
 
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="flex-column">
+              <Nav className="flex-column navigation-content">
                 <Nav.Link href="#home"> <BiSolidDashboard /> Dashboard</Nav.Link>
                 <Nav.Link href="#users"> <FaUsers /> Users</Nav.Link>
                 <Nav.Link href="#analytics"> <SiSimpleanalytics /> Analytics</Nav.Link>
@@ -29,12 +27,10 @@ function NavigationBar() {
                 <Nav.Link href="#settings"> <RiSettings5Fill /> Settings</Nav.Link>
               </Nav>
             </Navbar.Collapse>
-          </div>
             
-        </div>
         </Container>
         </Navbar>
     )
 }
 
-export default NavigationBar
+export default NavigationBar;
