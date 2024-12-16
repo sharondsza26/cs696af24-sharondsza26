@@ -8,6 +8,8 @@ import { useLocation } from 'react-router-dom';
 
 function EditTagsView({ itemId }) {
   const [tags, setTags] = useState([]);
+  const location = useLocation();
+  const { _id } = location.state;
 
   const [showAddItems, setShowAddItems] = useState(false);
 
@@ -15,7 +17,7 @@ function EditTagsView({ itemId }) {
   useEffect(() => {
     const fetchTags = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/outfits/wardrobe/${itemId}/tags`);
+        const response = await fetch(`http://localhost:8000/api/outfits/wardrobe/${_id}/tags`);
         const data = await response.json();
         if (response.ok) {
           setTags(data.tags || []);  // Update the tags state with the fetched tags
@@ -47,7 +49,7 @@ function EditTagsView({ itemId }) {
     // Re-fetch the tags after adding a new one to update the list
     const fetchTags = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/outfits/wardrobe/${itemId}/tags`);
+        const response = await fetch(`http://localhost:8000/api/outfits/wardrobe/${_id}/tags`);
         const data = await response.json();
         if (response.ok) {
           setTags(data.tags || []);
@@ -79,7 +81,7 @@ function EditTagsView({ itemId }) {
       {showAddItems && (
         <div className="add-items-modal">
           <IoClose className="close-icon" onClick={handleCloseAddItems} />
-          <AddTagsView itemId={itemId} onTagsAdded={onTagsAdded} />
+          <AddTagsView itemId={_id} onTagsAdded={onTagsAdded} />
         </div>
       )}
 
